@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.praxxys.trinityteam" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Trinity Team</name>
+    <description>
+        Trinity Team App
+    </description>
+    <author email="glenn@praxxys.ph" href="praxxys.ph">
+        PSI
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <plugin name="cordova-plugin-geolocation" spec="~4.0.1">
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+            <string>Take the current GPS location of the user to get the nearest establishment</string>
+        </edit-config>
+    </plugin>
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="iosPersistentFileLocation" value="Compatibility" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="android-targetSdkVersion" value="28" />
+        <splash density="land-hdpi" src="res/icon/android/drawable-land-hdpi/screen.png" />
+        <splash density="land-ldpi" src="res/icon/android/drawable-land-ldpi/screen.png" />
+        <splash density="land-mdpi" src="res/icon/android/drawable-land-mdpi/screen.png" />
+        <splash density="land-xhdpi" src="res/icon/android/drawable-land-xhdpi/screen.png" />
+        <splash density="port-hdpi" src="res/icon/android/drawable-hdpi/screen.png" />
+        <splash density="port-ldpi" src="res/icon/android/drawable-ldpi/screen.png" />
+        <splash density="port-mdpi" src="res/icon/android/drawable-mdpi/screen.png" />
+        <splash density="port-xhdpi" src="res/icon/android/drawable-xhdpi/screen.png" />
+        <icon density="ldpi" src="res/icon/android/drawable-ldpi/icon.png" />
+        <icon density="mdpi" src="res/icon/android/drawable-mdpi/icon.png" />
+        <icon density="hdpi" src="res/icon/android/drawable-hdpi/icon.png" />
+        <icon density="xhdpi" src="res/icon/android/drawable-xhdpi/icon.png" />
+        <icon density="xxhdpi" src="res/icon/android/drawable-xxhdpi/icon.png" />
+        <icon density="xxxhdpi" src="res/icon/android/drawable-xxxhdpi/icon.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="DisallowOverscroll" value="true" />
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <plugin name="Geolocation" value="CDVLocation" />
+        <config-file overwrite="true" parent="NSLocationWhenInUseUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Take the current GPS location of the user to get the nearest establishment</string>
+        </config-file>
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="DisallowOverscroll" value="true" />
+        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+            <string>Take photos to upload for processing purposes</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+            <string>Take photos to upload for processing purposes</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
+            <string>Take photos to upload for processing purposes</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+            <string>Take the current GPS location of the user to get the nearest establishment</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
+            <string>Take the current GPS location of the user to get the nearest establishment</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysAndWhenInUseUsageDescription">
+            <string>Take the current GPS location of the user to get the nearest establishment</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSBluetoothAlwaysUsageDescription">
+            <string>Our app does not request this permission or utilize this functionality but it is included in our info.plist since our app utilizes the cordova-permissions library, which references this permission in its code.</string>
+        </edit-config>
+        <splash src="res/icon/ios/Default~iphone.png" />
+        <splash src="res/icon/ios/Default@2x~iphone.png" />
+        <splash src="res/icon/ios/Default-568h@2x~iphone.png" />
+        <splash src="res/icon/ios/Default-Portrait~ipad.png" />
+        <splash src="res/icon/ios/Default-Portrait@2x~ipad.png" />
+        <icon height="180" src="res/icon/ios/icon-60@3x.png" width="180" />
+        <icon height="60" src="res/icon/ios/icon-60.png" width="60" />
+        <icon height="120" src="res/icon/ios/icon-60@2x.png" width="120" />
+        <icon height="152" src="res/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="167" src="res/icon/ios/icon-83.5@2x.png" width="167" />
+        <icon height="40" src="res/icon/ios/icon-40.png" width="40" />
+        <icon height="80" src="res/icon/ios/icon-40@2x.png" width="80" />
+        <icon height="50" src="res/icon/ios/icon-50.png" width="50" />
+        <icon height="100" src="res/icon/ios/icon-50@2x.png" width="100" />
+        <icon height="57" src="res/icon/ios/icon.png" width="57" />
+        <icon height="114" src="res/icon/ios/icon@2x.png" width="114" />
+        <icon height="72" src="res/icon/ios/icon-72.png" width="72" />
+        <icon height="144" src="res/icon/ios/icon-72@2x.png" width="144" />
+        <icon height="29" src="res/icon/ios/icon-small.png" width="29" />
+        <icon height="58" src="res/icon/ios/icon-small@2x.png" width="58" />
+        <icon height="87" src="res/icon/ios/icon-small@3x.png" width="87" />
+        <icon height="1024" src="res/icon/ios/1024x1024.png" width="1024" />
+    </platform>
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#ffffff" />
+    <preference name="StatusBarStyle" value="default" />
+    <preference name="StatusBarDefaultScrollToTop" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <plugin name="cordova-plugin-geolocation" spec="~4.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="com-sarriaroman-photoviewer" spec="^1.1.10" />
+    <plugin name="cordova-plugin-camera" spec="~4.0.3" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova.plugins.diagnostic" spec="^4.0.12">
+        <variable name="ANDROID_SUPPORT_VERSION" value="27.+" />
+    </plugin>
+    <plugin name="cordova-plugin-network-information" spec="^2.0.2" />
+    <plugin name="cordova-plugin-request-location-accuracy" spec="^2.3.0">
+        <variable name="PLAY_SERVICES_LOCATION_VERSION" value="16.+" />
+    </plugin>
+    <plugin name="cordova-plugin-background-mode" spec="^0.7.3" />
+    <plugin name="cordova-plugin-file" spec="^6.0.2" />
+    <plugin name="cordova-android-support-gradle-release" spec="^3.0.1">
+        <variable name="ANDROID_SUPPORT_VERSION" value="27.+" />
+    </plugin>
+    <plugin name="cordova-sqlite-storage" spec="3.4.0" />
+    <plugin name="cordova-plugin-dialogs" spec="^2.0.2" />
+    <plugin name="cordova-plugin-device" spec="^2.0.3" />
+    <engine name="ios" spec="^5.1.1" />
+    <engine name="browser" spec="^6.0.0" />
+    <engine name="android" spec="^8.1.0" />
+</widget>
